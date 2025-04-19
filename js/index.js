@@ -74,7 +74,7 @@ function createRecipeCard(recipe) {
     </div>
     <!-- View Recipe Button -->
     <div class="mt-4">
-      <a href="../pages/viewrecipe.html?id=${recipe.id}" class="block w-full text-center bg-amber-50 hover:bg-amber-100 text-amber-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">
+      <a href="./pages/viewrecipe.html?id=${recipe.id}" class="block w-full text-center bg-amber-50 hover:bg-amber-100 text-amber-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">
         <i class="fas fa-eye mr-2"></i> View Recipe
       </a>
     </div>
@@ -104,7 +104,7 @@ function createRecipeCard(recipe) {
           <div class="text-center py-8 col-span-full">
             <i class="fas fa-book-open text-orange-500 text-2xl"></i>
             <p class="mt-2 text-gray-600">No recipes found. Create your first recipe!</p>
-            <a href="../pages/add-recipe.html" class="mt-4 inline-block bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full font-medium transition">
+            <a href="./pages/addrecipe.html" class="mt-4 inline-block bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full font-medium transition">
               Add Recipe
             </a>
           </div>
@@ -136,7 +136,7 @@ function createRecipeCard(recipe) {
   if (e.target.closest("#logOutBtn")) {
     try {
       await signOut(auth);
-      window.location.href = "../index.html";
+      window.location.href = "./index.html";
     } catch (error) {
       console.error("Error signing out:", error);
     }
@@ -161,9 +161,9 @@ function createRecipeCard(recipe) {
             <!-- Dropdown Menu (hidden by default) -->
             <div class="absolute right-0 mt-0 w-48 bg-white rounded-md shadow-lg z-10 hidden group-hover:block">
               <div class="py-1">
-                <a href="../pages/editprofile.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Edit Profile</a>
-                <a href="../pages/addrecipe.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Add Recipe</a>
-                <a href="../pages/profile.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">My Recipes</a>
+                <a href="./pages/editprofile.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Edit Profile</a>
+                <a href="./pages/addrecipe.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Add Recipe</a>
+                <a href="./pages/profile.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">My Recipes</a>
                 <div class="border-t border-gray-100"></div>
                 <a href="#" id="logOutBtn" class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100">Logout</a>
               </div>
